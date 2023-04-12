@@ -1,0 +1,242 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button, input[type=submit] {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.612rem - 1px) calc(1rem - 1px);
+}
+
+button:hover, input[type=submit]:hover{
+  text-decoration: underline;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 80%;
+  margin: 0 auto;
+}
+
+header > h1 {
+  flex-basis: 50%;
+}
+
+header > form {
+  display: flex;
+  gap: 10px;
+}
+
+header > form > input[type=text] {
+  width: 50%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  padding: 7px 0;
+  background: transparent;
+}
+
+header > form > input[type=text]::placeholder {
+  color: rgba(0,0,0,0.5);
+}
+
+header > .AddNote {
+  margin: 0 2%;
+}
+
+.NotesList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 80%;
+  min-height: 80%;
+  margin: 0 auto;
+}
+
+.Note {
+  flex-basis: 48%;
+
+  border-style: solid;
+  border-width: 2px;
+
+  margin-bottom: 2em;
+}
+
+.note--title{
+  cursor: pointer;
+}
+
+.note--title:hover{
+  text-decoration: underline;
+}
+
+.note--content {
+  margin: 2%;
+}
+
+.note--footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note--icons {
+  font-size: larger;
+}
+
+.note--icons > * {
+  margin: 0 .30em;
+}
+
+.note--button {
+  cursor: pointer;
+}
+
+.note--button:hover {
+  text-decoration: underline;
+}
+
+.note--display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 40vh;
+}
+
+.note--display > .content {
+  flex-grow: 5;
+}
+
+.note--display > .tags {
+  text-align: center;
+}
+
+.note--display > .actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1rem;
+}
+
+.delete--div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  text-align: center;
+
+  min-height: 20vh;
+}
+
+.delete--div > .actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal {
+  font-size: 12px;
+}
+.modal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .content {
+  width: 80%;
+  padding: 10px 5px;
+  margin: 0 auto;
+}
+
+.modal > .content > form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.modal > .content > form > .actions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
+footer {
+  height: 50px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    font-size: small;
+  }
+
+  header > form {
+    display: none;
+  }
+
+  button, input[type=submit]{
+    padding: 5px;
+  }
+
+  .Note{
+    flex-basis: 100%;
+  }
+}
